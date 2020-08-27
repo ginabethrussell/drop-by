@@ -1,0 +1,203 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Stylesheet */
+html{
+    font-size: 62.5%;
+    font-family: 'Noto Sans', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.wrapper * {
+    padding: 20px;
+    font-size: 1.8rem;
+}
+.page-header, .page-footer {
+    background: white;
+    height: auto;
+}
+.page-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    font-weight: 700;
+    font-size: 2rem;
+    padding-left: 0;
+}
+.page-header ul {
+    display: flex;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+button {
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.page-header .cta-contact {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 5px 18px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.page-main {
+    background: url('electric-scooter-4983759_1920.jpg') no-repeat center/cover;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 300px;
+    color: white;
+}
+.page-main div {
+    padding: 5px;
+    width: 250px;
+    background: #FFFAFA;
+    color: black;
+    border-radius: 5px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.page-main h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+.page-main p {
+    line-height: 1.2;
+    font-size: 1.8rem;
+}
+.page-main #main-btn {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 5px 18px;
+    border: 1px solid;
+    border-radius: 5px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-footer ul {
+    display: flex;
+    font-size: 1.6rem;
+}
+.page-footer li, .page-footer li a {
+    padding: 0;
+}
+.page-footer li:not(:last-child){
+    /* margin-right: 20px; */
+}
+
+@media screen and (max-width: 500px){
+    .page-footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .page-footer small {
+        padding-top: 0;
+        order: 1;
+    }
+    .page-main div {
+        margin-left: 0;
+    }
+    .page-header ul {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    .page-header ul li {
+        padding-bottom: 0;
+    }
+    .page-main .mobile-display {
+        display: none;
+    }
+    .page-main div {
+        width: 50%;
+    }
+    nav .logo {
+        padding-top: 0;
+    }
+
+}
+@media screen and (max-width: 850px){
+    .page-header ul {
+        width: 100%;
+        order: 1;
+        padding: 0;
+    }
+
+}
